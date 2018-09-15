@@ -17,7 +17,7 @@
 #define PRIME 0
 #else
 // Otherwise, go to next divisor.
-#include "IsPrime.inc"
+#include "IsPrime.h"
 #endif
 
 #else

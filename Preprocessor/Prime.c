@@ -11,23 +11,23 @@
 // Start number will be 3.
 #define BEG4 0
 #define CUR_CTR4 400
-#include "RewindCounter4.inc"
+#include "RewindCounter4.h"
 #undef CUR_CTR4
 #undef BEG4
 
 #define BEG4 400
 #define CUR_CTR4 800
-#include "RewindCounter4.inc"
+#include "RewindCounter4.h"
 #undef CUR_CTR4
 
 #define CUR_CTR 901
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 
 #define MAX_NUM 100
 int a[] = {
   2,
-#include "Primes.inc"
+#include "Primes.h"
 };
 
 #define SIZEOF_A(A) (sizeof(A)/sizeof(A[0]))

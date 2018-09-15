@@ -4,19 +4,19 @@
 
 #if (X) < CUR_CTR4
 #define CUR_CTR (BEG4 + C4)
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 
 #define CUR_CTR (BEG4 + C4 * 2)
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 
 #define CUR_CTR (BEG4 + C4 * 3)
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 
 #define CUR_CTR (CUR_CTR4)
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 #endif
 

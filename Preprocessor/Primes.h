@@ -6,7 +6,7 @@
 
 #if (NUM) <= (MAX_NUM) // Outer loop
 // Check current number.
-#include "IsPrime.inc"
+#include "IsPrime.h"
 
 // Print it if it is prime.
 #if PRIME == 1
@@ -20,16 +20,16 @@ NUM,
 // Go to next number.
 #define CUR_CTR ((((X - 3) / 100) + 1) * 100)
 #if (X % 300) < 100
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #endif
 #if (X % 300) < 200
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #endif
-#include "RewindCounter.inc"
+#include "RewindCounter.h"
 #undef CUR_CTR
 
 // Recurse.
-#include "Primes.inc"
+#include "Primes.h"
 
 #else
 // Lengthen critical path.
