@@ -5,14 +5,16 @@
 #define PRIME 1
 #endif
 
+# if !defined(DIVISOR_X1)
 // X % 100 is in range [2, 3] and X is used 4 times.
-#define DIVISOR (((((X) % 300) - 3) / 4) + 2)
+#define DIVISOR_X1 (((((X) % 300) - 3) / 4) + 2)
+#endif
 
 // First divisor is (((3 - 3) / 4) + 2) == 2
-#if ((DIVISOR * 2 - 2) <= ((NUM))) && PRIME
+#if ((DIVISOR_X1 * 2 - 2) <= ((NUM_X1))) && PRIME
 
 // N % D == 0, number is composite.
-#if (NUM) % (DIVISOR) == 0
+#if (NUM_X1) % (DIVISOR_X1) == 0
 #undef PRIME
 #define PRIME 0
 #else
@@ -27,3 +29,5 @@
 #endif
 
 #endif
+
+#undef DIVISOR_X1

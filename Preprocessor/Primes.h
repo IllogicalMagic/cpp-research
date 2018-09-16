@@ -1,16 +1,16 @@
 // Generates sequence of prime numbers not bigger than MAX_NUM.
 // Define anything only once.
-#if !defined NUM
-#define NUM ((X / 300) + 3)
+#if !defined NUM_X1
+#define NUM_X1 ((X / 300) + 3)
 #endif
 
-#if (NUM) <= (MAX_NUM) // Outer loop
+#if (NUM_X1) <= (MAX_NUM) // Outer loop
 // Check current number.
 #include "IsPrime.h"
 
 // Print it if it is prime.
 #if PRIME == 1
-NUM,
+NUM_X1,
 #else
 // Lengthen critical path.
 #if X
@@ -40,4 +40,4 @@ NUM,
 
 #endif // Outer loop
 
-#undef NUM
+#undef NUM_X1
