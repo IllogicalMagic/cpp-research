@@ -1,7 +1,7 @@
 // Generates sequence of prime numbers not bigger than MAX_NUM.
 // Define anything only once.
 #if !defined NUM
-#define NUM (X / 300)
+#define NUM ((X / 300) + 3)
 #endif
 
 #if (NUM) <= (MAX_NUM) // Outer loop
@@ -13,7 +13,9 @@
 NUM,
 #else
 // Lengthen critical path.
-#line X
+#if X
+#endif
+
 #endif
 #undef PRIME
 
@@ -33,8 +35,9 @@ NUM,
 
 #else
 // Lengthen critical path.
-#line X
-#line X
+#if X - X
+#endif
+
 #endif // Outer loop
 
 #undef NUM

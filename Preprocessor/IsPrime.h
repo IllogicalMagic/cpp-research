@@ -23,7 +23,7 @@
 #else
 
 // Lengthen critical path.
-#line X
-#line X
+#if X - X
+#endif
 
 #endif
